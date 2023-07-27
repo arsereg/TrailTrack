@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {TermsAndConditionsComponent} from "./terms-and-conditions/terms-and-conditions.component";
 
 
 @Component({
@@ -15,16 +13,10 @@ export class SignInPageComponent implements OnInit{
   ngOnInit(): void {
   }
 
-  constructor(private dialog: MatDialog) {
+  constructor() {
   }
 
-  displayTermsAndConditions() {
-    const dialogConfig = new MatDialogConfig();
-
-    dialogConfig.autoFocus = true;
-    dialogConfig.maxHeight = '90vh';
-    dialogConfig.panelClass = 'dialog-style'
-
-    this.dialog.open(TermsAndConditionsComponent, dialogConfig);
+  goToRegister() {
+    window.location.href = '/register';
   }
 }

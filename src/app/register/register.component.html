@@ -1,1 +1,55 @@
-<p>register works!</p>
+<div class="wrapper">
+  <h1>Register</h1>
+
+  <div class="imageWrapper">
+    <img src="assets/images/user-icon.svg"/>
+  </div>
+
+  <form>
+    <div class="inputWrapper">
+      <div class="inputIcon">
+        <img src="assets/images/fullNameIcon.svg">
+      </div>
+      <input type="text" placeholder="Full name">
+    </div>
+    <div class="inputWrapper">
+      <div class="inputIcon">
+        <img src="assets/images/envelope.svg">
+      </div>
+      <input type="text" placeholder="Email">
+    </div>
+    <div class="inputWrapper">
+      <div class="inputIcon">
+        <img src="assets/images/helmet.svg">
+      </div>
+      <input type="text" placeholder="Username">
+    </div>
+    <div class="inputWrapper">
+      <div class="inputIcon">
+        <img src="assets/images/key.svg">
+      </div>
+      <input type="password" placeholder="Password">
+    </div>
+    <div class="inputWrapper">
+      <div class="inputIcon">
+        <img src="assets/images/double-key.svg">
+      </div>
+      <input type="password" placeholder="Confirm Password">
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputIcon">
+        <img src="assets/images/expertise-level.svg">
+      </div>
+      <select name="expertiseLevel" id="expertiseLevel">
+        <option value="selectOne">Expertise Level</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+    </div>
+
+    <button (click)="displayTermsAndConditions(); $event.preventDefault()">Register</button>
+
+  </form>
+</div>
