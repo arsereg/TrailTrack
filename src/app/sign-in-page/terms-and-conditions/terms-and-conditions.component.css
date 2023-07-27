@@ -1,0 +1,44 @@
+h1{
+  font-family: "ff-good-headline-web-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color:#414141;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+h2{
+  font-size: 0.8em;
+}
+
+p{
+  font-size: 0.7em;
+}
+
+.wrapper{
+  background-color:#E2E2E2;
+  color: #414141 !important;
+  padding: 15px;
+}
+
+.textContainer{
+  height: 65vh;
+  overflow: scroll;
+}
+
+#readMore, #acceptAndContinue{
+  width: 270px;
+  height: 39.438px;
+  flex-shrink: 0;
+  background: #414141;
+  border-radius: 8px;
+  display: block;
+  margin: 10px auto;
+  color: white;
+  border: none;
+}
+
+#acceptAndContinue{
+  background: #04bae6
+}

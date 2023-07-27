@@ -1,0 +1,13 @@
+.wrapper{
+  display:grid;
+  place-items:center;
+  height:100vh;
+  background-color: #414141
+}
+
+.main-logo{
+  width:271px;
+  height: auto;
+  flex-shrink: 0;
+  margin:auto;
+}
