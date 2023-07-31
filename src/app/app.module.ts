@@ -26,6 +26,7 @@ import {GoogleMapsModule} from "@angular/google-maps";
 import { MapComponent } from './map/map.component';
 import { EventPageComponent } from './events/event-page/event-page.component';
 import { LogInComponent } from './log-in/log-in.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { LogInComponent } from './log-in/log-in.component';
     MatSidenavModule,
     MatButtonModule,
     MatListModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

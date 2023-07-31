@@ -11,38 +11,38 @@
       <div class="inputIcon">
         <img src="assets/images/fullNameIcon.svg">
       </div>
-      <input type="text" placeholder="Full name" formControlName="fullName">
+      <input type="text" placeholder="Full name" formControlName="fullName" [ngClass]="validFullName ? '' : 'error'" />
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/envelope.svg">
       </div>
-      <input type="email" placeholder="Email" formControlName="email">
+      <input type="email" placeholder="Email" formControlName="email" [ngClass]="validEmail ? '' : 'error'" />
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/helmet.svg">
       </div>
-      <input type="text" placeholder="Username" formControlName="username">
+      <input type="text" placeholder="Username" formControlName="userName" [ngClass]="validUserName ? '' : 'error'" />
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/key.svg">
       </div>
-      <input type="password" placeholder="Password" formControlName="password">
+      <input type="password" placeholder="Password" formControlName="password" [ngClass]="validPassword ? '' : 'error'" />
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/double-key.svg">
       </div>
-      <input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+      <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" [ngClass]="validConfirmPassword ? '' : 'error'" />
     </div>
 
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/expertise-level.svg">
       </div>
-      <select name="expertiseLevel" id="expertiseLevel">
+      <select name="expertiseLevel" id="expertiseLevel" formControlName="expertiseLevel">
         <option value="beginner">Beginner</option>
         <option value="intermediate">Intermediate</option>
         <option value="advanced">Advanced</option>

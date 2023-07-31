@@ -15,6 +15,10 @@ export class TermsAndConditionsComponent {
   }
 
   closeDialog() {
-    this.dialogRef.close('Pizza!');
+    this.dialogRef.close('Not accepted');
+  }
+
+  acceptDialog(){
+    this.dialogRef.close("Accepted");
   }
 }
