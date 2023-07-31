@@ -13,4 +13,5 @@ export class RoutesComponent {
   constructor() { }
 
 
+  protected readonly location = location;
 }

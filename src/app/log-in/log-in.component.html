@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <h1>Login</h1>
+  <p>Need an account? <a (click)="location.href='register'" style="color: #04bae6">Register</a></p>
+
+  <div class="imageWrapper">
+    <img src="assets/images/user-icon.svg"/>
+  </div>
+
+  <form >
+    <div class="inputWrapper">
+      <div class="inputIcon">
+        <img src="assets/images/helmet.svg">
+      </div>
+      <input type="text" placeholder="Username" formControlName="username">
+    </div>
+    <div class="inputWrapper">
+      <div class="inputIcon">
+        <img src="assets/images/key.svg">
+      </div>
+      <input type="password" placeholder="Password" formControlName="password">
+    </div>
+
+
+    <button id="registerButton" type="submit">Log in</button>
+
+  </form>
+</div>

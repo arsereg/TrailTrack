@@ -4,3 +4,22 @@
   text-align:center;
   padding: 15px;
 }
+
+.imageWrapper{
+  width: 100%;
+  text-align: center;
+  padding: 5px 0 0 5px;
+}
+
+
+.changePassword{
+  width: 398px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #04BAE6;
+  color: white;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}

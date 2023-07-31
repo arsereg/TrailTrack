@@ -10,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+  name: string = 'Gino Marin';
+  email: string = 'gmarinl@ucenfotec.ac.cr';
+
+
+
+
 }

@@ -3,7 +3,7 @@
   <input type="search" placeholder="Search" class="search">
 
   <div class="vendorsWrapper">
-    <app-event-card *ngFor="let vendor of vendors" name="{{vendor.name}}" description="{{vendor.description}}" phoneNumber="{{vendor.phoneNumber}}" whatsapp="{{vendor.whatsapp}}" image="{{vendor.image}}"></app-event-card>
+    <app-event-card *ngFor="let vendor of vendors" id="{{vendor.id}}" name="{{vendor.name}}" description="{{vendor.description}}" phoneNumber="{{vendor.phoneNumber}}" whatsapp="{{vendor.whatsapp}}" image="{{vendor.image}}"></app-event-card>
   </div>
 
 </div>

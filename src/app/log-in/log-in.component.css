@@ -1,0 +1,89 @@
+h1{
+  font-family: "ff-good-headline-web-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color:#E2E2E2;
+  font-size: 3em;
+  padding-left: 30px;
+}
+
+input{
+  width: 307px;
+  height: 50px;
+  flex-shrink: 0;
+  background: #d9d9d9;
+  margin: 0px auto;
+  border-radius: 8px;
+  color: #000000;
+  padding: 0 0 0 60px;
+  border:none;
+  display:inline;
+  clear:both;
+}
+
+select, option{
+  width: 367px;
+  height: 50px;
+  flex-shrink: 0;
+  background: #d9d9d9;
+  margin: 0 auto;
+  border-radius: 8px;
+  color: #000000;
+  border:none;
+  text-indent: 60px;
+}
+
+img{
+  margin: 0 auto;
+}
+
+.wrapper{
+  background: #414141;
+  height: 100vh;
+  color: #E2E2E2;
+  padding: 30px 10px 10px 10px;
+}
+
+.imageWrapper{
+  width: 100%;
+  text-align: center;
+  padding: 5px 0 0 5px;
+}
+
+.inputWrapper{
+  margin: 8px auto;
+  width: 367px;
+  position:relative;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.inputIcon{
+  width: 42px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #04BAE6;
+  float:left;
+  position:absolute;
+  display: grid;
+  place-items: center;
+}
+
+#registerButton{
+  width: 367px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #04BAE6;
+  margin: 15px auto;
+  color: #E2E2E2;
+  border: none;
+
+}

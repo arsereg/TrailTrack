@@ -36,4 +36,5 @@ export class RegisterComponent implements OnInit{
   ngOnInit(): void {
   }
 
+  protected readonly location = location;
 }

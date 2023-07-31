@@ -7,7 +7,7 @@ import {Component, Input} from '@angular/core';
 })
 export class EventCardComponent {
   @Input()
-  id: number | null = null;
+  id: number | string | null = null;
   @Input()
   name: string = 'Vendor name';
   @Input()
@@ -19,7 +19,7 @@ export class EventCardComponent {
   @Input()
   image: string = '';
 
-  navigateToVendorPage(){
+  navigateToEventPage(){
     let uri = `vendor/${this.id}/${this.name}/${this.description}/${this.phoneNumber}/${this.whatsapp}/${this.image}`
     location.href=uri;
   }

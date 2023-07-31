@@ -22,6 +22,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { VendorCardComponent } from './vendors/vendor-card/vendor-card.component';
 import { VendorPageComponent } from './vendors/vendor-page/vendor-page.component';
 import { EventCardComponent } from './events/event-card/event-card.component';
+import {GoogleMapsModule} from "@angular/google-maps";
+import { MapComponent } from './map/map.component';
+import { EventPageComponent } from './events/event-page/event-page.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { EventCardComponent } from './events/event-card/event-card.component';
     ProfileComponent,
     VendorCardComponent,
     VendorPageComponent,
-    EventCardComponent
+    EventCardComponent,
+    MapComponent,
+    EventPageComponent,
+    LogInComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +61,8 @@ import { EventCardComponent } from './events/event-card/event-card.component';
     FormsModule,
     MatSidenavModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
