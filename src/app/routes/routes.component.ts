@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {SideMenuVisibilityService} from "../services/side-menu-visibility-service/side-menu-visibility.service";
 
 @Component({
   selector: 'app-routes',
@@ -11,9 +10,7 @@ import {SideMenuVisibilityService} from "../services/side-menu-visibility-servic
 })
 export class RoutesComponent {
 
-  constructor(private sideMenuVisibilityService: SideMenuVisibilityService) { }
+  constructor() { }
 
-  toggleSideMenu() {
-    this.sideMenuVisibilityService.toggleSideMenuVisibility();
-  }
+
 }

@@ -1,1 +1,15 @@
-<p>event-card works!</p>
+<div class="wrapper">
+  <a (click)="navigateToVendorPage()">
+    <div class="headerImage" [ngStyle]="{'background-image': 'url(' + image + ')'}"></div>
+    <div class="nameAndDescription">
+      <h2>{{name}}</h2>
+      <h4>{{description}}</h4>
+    </div>
+  </a>
+
+  <div class="contact">
+    <a href="tel:{{phoneNumber}}"><img *ngIf="phoneNumber !== null" src="assets/images/phone.fill.svg" alt="Call {{name}}"></a>
+    <a href="https://wa.me/{{whatsapp}}" target="_blank"><img *ngIf="whatsapp !== null" src="assets/images/whatsapp.svg" alt="Send a message to {{whatsapp}} through Whatsapp"></a>
+  </div>
+
+</div>
