@@ -4,6 +4,7 @@ h1{
   font-style: normal;
   color:#E2E2E2;
   font-size: 3em;
+  padding-left: 30px;
 }
 
 input{
@@ -73,4 +74,16 @@ form{
   position:absolute;
   display: grid;
   place-items: center;
+}
+
+#registerButton{
+  width: 367px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #04BAE6;
+  margin: 15px auto;
+  color: #E2E2E2;
+  border: none;
+
 }

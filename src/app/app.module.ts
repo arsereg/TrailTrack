@@ -10,6 +10,18 @@ import { TermsAndConditionsComponent } from './register/terms-and-conditions/ter
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
 import { RegisterComponent } from './register/register.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { RoutesComponent } from './routes/routes.component';
+import {CommonModule} from "@angular/common";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatButtonModule} from "@angular/material/button";
+import {MatListModule} from "@angular/material/list";
+import { EventsComponent } from './events/events.component';
+import { ServicesComponent } from './vendors/services.component';
+import { ProfileComponent } from './profile/profile.component';
+import { VendorCardComponent } from './vendors/vendor-card/vendor-card.component';
+import { VendorPageComponent } from './vendors/vendor-page/vendor-page.component';
+import { EventCardComponent } from './events/event-card/event-card.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +29,17 @@ import { RegisterComponent } from './register/register.component';
     LoaderComponent,
     SignInPageComponent,
     TermsAndConditionsComponent,
-    RegisterComponent
+    RegisterComponent,
+    RoutesComponent,
+    EventsComponent,
+    ServicesComponent,
+    ProfileComponent,
+    VendorCardComponent,
+    VendorPageComponent,
+    EventCardComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
@@ -29,7 +49,12 @@ import { RegisterComponent } from './register/register.component';
     }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

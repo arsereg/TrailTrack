@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <h1>Products & Services</h1>
+  <input type="search" placeholder="Search" class="search">
+
+  <div class="vendorsWrapper">
+    <app-vendor-card *ngFor="let vendor of vendors" name="{{vendor.name}}" description="{{vendor.description}}" phoneNumber="{{vendor.phoneNumber}}" whatsapp="{{vendor.whatsapp}}" image="{{vendor.image}}"></app-vendor-card>
+  </div>
+
+</div>

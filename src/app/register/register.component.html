@@ -5,36 +5,36 @@
     <img src="assets/images/user-icon.svg"/>
   </div>
 
-  <form>
+  <form (ngSubmit)="displayTermsAndConditions()" [formGroup]="registerForm">
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/fullNameIcon.svg">
       </div>
-      <input type="text" placeholder="Full name">
+      <input type="text" placeholder="Full name" formControlName="fullName">
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/envelope.svg">
       </div>
-      <input type="text" placeholder="Email">
+      <input type="email" placeholder="Email" formControlName="email">
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/helmet.svg">
       </div>
-      <input type="text" placeholder="Username">
+      <input type="text" placeholder="Username" formControlName="username">
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/key.svg">
       </div>
-      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Password" formControlName="password">
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/double-key.svg">
       </div>
-      <input type="password" placeholder="Confirm Password">
+      <input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
     </div>
 
     <div class="inputWrapper">
@@ -42,14 +42,13 @@
         <img src="assets/images/expertise-level.svg">
       </div>
       <select name="expertiseLevel" id="expertiseLevel">
-        <option value="selectOne">Expertise Level</option>
         <option value="beginner">Beginner</option>
         <option value="intermediate">Intermediate</option>
         <option value="advanced">Advanced</option>
       </select>
     </div>
 
-    <button (click)="displayTermsAndConditions(); $event.preventDefault()">Register</button>
+    <button id="registerButton" type="submit">Register</button>
 
   </form>
 </div>

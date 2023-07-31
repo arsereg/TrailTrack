@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" (click)="drawer.close()">
+    <mat-nav-list>
+      <img src="assets/images/logo-trailtrack.svg">
+      <a mat-list-item routerLink="/routes" routerLinkActive="active">Routes</a>
+      <a mat-list-item routerLink="/events" routerLinkActive="active">Events</a>
+      <a mat-list-item routerLink="/services" routerLinkActive="active">Services</a>
+      <a mat-list-item routerLink="/profile" routerLinkActive="active">Profile</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <div class="sidenav-content" *ngIf="shouldDisplayMenu()">
+    <img class="menuButton" src="assets/images/menu.svg" alt="Main menu" (click)="drawer.toggle()">
+  </div>
+  <router-outlet></router-outlet>
+
+</mat-drawer-container>
+

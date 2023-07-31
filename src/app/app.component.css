@@ -1,0 +1,15 @@
+img{
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
+.menuButton{
+  width: 35px;
+}
+
+.sidenav-content{
+  background: #414141;
+  border-bottom:none;
+  margin-bottom: 0;
+  padding-left: 25px;
+}
