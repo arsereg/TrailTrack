@@ -8,8 +8,13 @@ import {Component, OnInit} from '@angular/core';
 export class LoaderComponent implements OnInit{
   ngOnInit(): void {
     // wait 5 seconds and then redirect to sign-in page
+    const token = localStorage.getItem('token');
     self.setTimeout(() => {
-      window.location.href = 'sign-in';
+      if(token){
+        window.location.href = 'routes';
+      }else{
+        window.location.href = 'sign-in';
+      }
     }, 3000);
   }
 

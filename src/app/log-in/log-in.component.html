@@ -6,21 +6,21 @@
     <img src="assets/images/user-icon.svg"/>
   </div>
 
-  <form >
+  <form (ngSubmit)="executeLogin()" [formGroup]="loginForm">
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/helmet.svg">
       </div>
-      <input type="text" placeholder="Username" formControlName="username">
+      <input type="text" placeholder="Username" formControlName="userName" [ngClass]="validUserName ? '' : 'error'" />
     </div>
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/key.svg">
       </div>
-      <input type="password" placeholder="Password" formControlName="password">
+      <input type="password" placeholder="Password" formControlName="password" [ngClass]="validPassword ? '' : 'error'" />
     </div>
 
-
+    <p *ngIf="invalidCredentials">Invalid username or password</p>
     <button id="registerButton" type="submit">Log in</button>
 
   </form>

@@ -85,5 +85,8 @@ form{
   margin: 15px auto;
   color: #E2E2E2;
   border: none;
+}
 
+.error{
+  background:#ffcccc;
 }
