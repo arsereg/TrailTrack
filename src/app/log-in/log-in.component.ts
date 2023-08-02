@@ -5,7 +5,10 @@ import {HttpClient} from "@angular/common/http";
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
-  styleUrls: ['./log-in.component.css']
+  styleUrls: ['./log-in.component.css'],
+  styles: [
+    '@import "https://use.typekit.net/kyt3qet.css";',
+    '@import "https://use.typekit.net/kyt3qet.css";']
 })
 export class LogInComponent implements OnInit{
 

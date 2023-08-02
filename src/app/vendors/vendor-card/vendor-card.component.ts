@@ -11,7 +11,7 @@ import {Component, Input} from '@angular/core';
 export class VendorCardComponent {
 
   @Input()
-  id: number | null = null;
+  id: number | string | null = null;
   @Input()
   name: string = 'Vendor name';
   @Input()
@@ -22,9 +22,11 @@ export class VendorCardComponent {
   whatsapp: string | null = null;
   @Input()
   image: string = '';
+  @Input()
+  service: string = ''
 
   navigateToVendorPage(){
-    let uri = `vendor/${this.id}/${this.name}/${this.description}/${this.phoneNumber}/${this.whatsapp}/${this.image}`
+    let uri = `vendor/${this.id}`
     location.href=uri;
   }
 }

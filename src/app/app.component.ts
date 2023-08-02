@@ -14,7 +14,7 @@ export class AppComponent {
   }
 
   shouldDisplayMenu() {
-    let shouldntShow = ['/sign-in', '/register', '/'];
+    let shouldntShow = ['/sign-in', '/register', '/', '/login'];
     let currentUri = this.router.url;
     for (let uri in shouldntShow) {
       if(currentUri === shouldntShow[uri]) {

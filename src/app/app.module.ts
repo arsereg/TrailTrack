@@ -26,7 +26,9 @@ import {GoogleMapsModule} from "@angular/google-maps";
 import { MapComponent } from './map/map.component';
 import { EventPageComponent } from './events/event-page/event-page.component';
 import { LogInComponent } from './log-in/log-in.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {TokenInterceptor} from "./services/token-interceptor";
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import {HttpClientModule} from "@angular/common/http";
     EventCardComponent,
     MapComponent,
     EventPageComponent,
-    LogInComponent
+    LogInComponent,
+    ChangePasswordComponent
   ],
   imports: [
     CommonModule,
@@ -66,7 +69,11 @@ import {HttpClientModule} from "@angular/common/http";
     GoogleMapsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

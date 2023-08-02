@@ -20,7 +20,7 @@ export class EventCardComponent {
   image: string = '';
 
   navigateToEventPage(){
-    let uri = `vendor/${this.id}/${this.name}/${this.description}/${this.phoneNumber}/${this.whatsapp}/${this.image}`
+    let uri = encodeURI(`event/${this.id}`)
     location.href=uri;
   }
 }

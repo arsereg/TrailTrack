@@ -7,7 +7,9 @@
 
   <p>Name: {{name}}</p>
   <p>Email: {{email}}</p>
+  <p>Expertise level: {{expertiseLevel}}</p>
 
-  <button class="changePassword">Change Password</button>
+  <button class="changePassword" (click)="goToChangePassword()">Change Password</button>
+  <button class="logOut" (click)="clearCredentials()">Log out</button>
 
 </div>

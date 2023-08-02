@@ -1,19 +1,19 @@
 <div class="wrapper">
   <div class="cardWrapper">
-    <div class="headerImage" [ngStyle]="{'background-image': 'url(' + image + ')'}"></div>
+    <div class="headerImage" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}"></div>
     <div class="nameAndDescription">
-      <h2>{{name}}</h2>
+      <h2>{{title}}</h2>
       <h4>{{description}}</h4>
     </div>
 
     <div class="contact">
-      <a href="tel:{{phoneNumber}}"><img *ngIf="phoneNumber !== null" src="assets/images/phone.fill.svg" alt="Call {{name}}"></a>
-      <a href="https://wa.me/{{whatsapp}}" target="_blank"><img *ngIf="whatsapp !== null" src="assets/images/whatsapp.svg" alt="Send a message to {{whatsapp}} through Whatsapp"></a>
+      <a href="tel:{{phone}}"><img *ngIf="phone !== null" src="assets/images/phone.fill.svg" alt="Call {{title}}"></a>
+      <a href="https://wa.me/{{contactLink}}" target="_blank"><img *ngIf="contactLink !== null" src="assets/images/whatsapp.svg" alt="Send a message to {{contactLink}} through Whatsapp"></a>
     </div>
   </div>
 
   <h3 class="workingHoursTitle">Event date:</h3>
   <h3 class="workingHours">{{eventDate}}</h3>
-  <p class="content">{{content}}</p>
+  <p class="content">{{description}}</p>
 
 </div>

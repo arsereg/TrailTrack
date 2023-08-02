@@ -50,7 +50,7 @@ export class RegisterComponent implements OnInit{
       dialogRef.afterClosed().subscribe(dialogValue => {
         if(dialogValue === 'Accepted'){
           this.registerNewUser(value)
-          location.href = 'sign-in';
+          location.href = 'login';
         }else{
           alert('Not implemented yet')
         }

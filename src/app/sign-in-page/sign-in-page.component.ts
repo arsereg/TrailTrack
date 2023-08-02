@@ -19,4 +19,8 @@ export class SignInPageComponent implements OnInit{
   goToRegister() {
     window.location.href = '/register';
   }
+
+  goToLogin() {
+    window.location.href = '/login';
+  }
 }

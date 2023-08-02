@@ -11,6 +11,7 @@ import {VendorPageComponent} from "./vendors/vendor-page/vendor-page.component";
 import {MapComponent} from "./map/map.component";
 import {EventPageComponent} from "./events/event-page/event-page.component";
 import {LogInComponent} from "./log-in/log-in.component";
+import {ChangePasswordComponent} from "./change-password/change-password.component";
 
 const routes: Routes = [
   { path: '', component: LoaderComponent },
@@ -20,11 +21,14 @@ const routes: Routes = [
   { path: 'events', component: EventsComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'vendor/:id/:name/:description/:phoneNumber/:whatsapp/:image', component: VendorPageComponent },
+  { path: 'vendor/:id', component: VendorPageComponent },
   { path: 'map', component: MapComponent},
-  { path: 'event/:id/:name/:description/:phoneNumber/:whatsapp/:image', component: EventPageComponent },
-  { path: 'login', component: LogInComponent }
+  { path: 'event/:id', component: EventPageComponent },
+  { path: 'login', component: LogInComponent },
+  { path: 'change-password', component: ChangePasswordComponent}
 ];
+
+
 
 
 @NgModule({
