@@ -4,6 +4,7 @@
 
   <div class="vendorsWrapper">
     <app-vendor-card *ngFor="let vendor of vendors" id="{{vendor.id}}" name="{{vendor.name}}" description="{{vendor.description}}" phoneNumber="{{vendor.phone}}" whatsapp="{{vendor.contactLink}}" image="{{vendor.imageUrl}}" service="{{vendor.service}}"></app-vendor-card>
+    <p *ngIf="vendors.length == 0">No results found</p>
   </div>
 
 </div>

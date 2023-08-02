@@ -4,6 +4,7 @@
 
   <div class="vendorsWrapper">
     <app-event-card *ngFor="let event of events" id="{{event.id}}" name="{{event.title}}" description="{{event.description}}" phoneNumber="{{event.phone}}" whatsapp="{{event.contactLink}}" image="{{event.imageUrl}}"></app-event-card>
+    <p *ngIf="events.length == 0">No results found</p>
   </div>
 
 </div>

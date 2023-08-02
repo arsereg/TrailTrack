@@ -9,7 +9,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class ServicesComponent implements OnInit{
 
-  vendors: Vendor[] | undefined;
+  vendors: Vendor[]= [];
 
 
   constructor(private httpClient: HttpClient){
