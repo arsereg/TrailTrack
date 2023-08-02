@@ -21,6 +21,11 @@ export class EventsComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.loadAllEvents();
+  }
+
+  loadAllEvents(){
+    this.events = [];
     this.httpClient.get('http://192.168.100.30:8080/api/events').subscribe(value => {
       console.log(value)
       for (let i in value){
@@ -30,4 +35,26 @@ export class EventsComponent implements OnInit{
     });
   }
 
+  executeSearch($event: Event) {
+    let inputData = ($event.target as HTMLInputElement).value;
+    if(!inputData){
+      this.loadAllEvents();
+    }else{
+      this.searchEvent(inputData);
+    }
+    ($event.target as HTMLInputElement).blur();
+
+  }
+
+  private searchEvent(inputData: string) {
+    this.events = [];
+    this.httpClient.get(`http://192.168.100.30:8080/api/events/by-name/${inputData}`).subscribe(value => {
+      console.log(value)
+      for (let i in value){
+        // @ts-ignore
+        this.events.push(value[i])
+      }
+    });
+
+  }
 }

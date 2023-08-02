@@ -1,6 +1,6 @@
 <div class="wrapper">
   <h1>Events</h1>
-  <input type="search" placeholder="Search" class="search">
+  <input type="search" placeholder="Search" class="search" (change)="executeSearch($event)">
 
   <div class="vendorsWrapper">
     <app-event-card *ngFor="let event of events" id="{{event.id}}" name="{{event.title}}" description="{{event.description}}" phoneNumber="{{event.phone}}" whatsapp="{{event.contactLink}}" image="{{event.imageUrl}}"></app-event-card>
