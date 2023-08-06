@@ -7,12 +7,12 @@ THE ADVENTURE
   </h1>
 
   <div id="car">
-    <img src="assets/images/login-car.svg">
+    <img src="assets/images/login-car.svg" aria-hidden="true">
   </div>
 
   <div id="sign-in">
-    <img src="assets/images/sign-in-icons.svg" (click)="goToLogin()">
-    <a (click)="goToRegister()">
+    <img src="assets/images/sign-in-icons.svg" (click)="goToLogin()" alt="Go to log in page">
+    <a (click)="goToRegister()" aria-label="Sign up">
       <p>Sign up</p>
     </a>
   </div>

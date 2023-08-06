@@ -2,22 +2,22 @@
   <h1>Login</h1>
   <p>Need an account? <a (click)="location.href='register'" style="color: #04bae6">Register</a></p>
 
-  <div class="imageWrapper">
+  <div class="imageWrapper" aria-hidden="true">
     <img src="assets/images/user-icon.svg"/>
   </div>
 
   <form (ngSubmit)="executeLogin()" [formGroup]="loginForm">
     <div class="inputWrapper">
-      <div class="inputIcon">
-        <img src="assets/images/helmet.svg">
+      <input type="text" placeholder="Username" formControlName="userName" class="usernameInput" [ngClass]="validUserName ? '' : 'error'" />
+      <div class="inputIcon" aria-hidden="true">
+        <img src="assets/images/helmet.svg" aria-hidden="true">
       </div>
-      <input type="text" placeholder="Username" formControlName="userName" [ngClass]="validUserName ? '' : 'error'" />
     </div>
     <div class="inputWrapper">
-      <div class="inputIcon">
+      <input type="password" placeholder="Password" formControlName="password" [ngClass]="validPassword ? '' : 'error'" />
+      <div class="inputIcon" aria-hidden="true">
         <img src="assets/images/key.svg">
       </div>
-      <input type="password" placeholder="Password" formControlName="password" [ngClass]="validPassword ? '' : 'error'" />
     </div>
 
     <p *ngIf="invalidCredentials">Invalid username or password</p>

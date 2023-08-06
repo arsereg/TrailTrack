@@ -3,49 +3,49 @@
   <p>Already have an account? <a (click)="location.href='login'" style="color:#04bae6">Login</a></p>
 
   <div class="imageWrapper">
-    <img src="assets/images/user-icon.svg"/>
+    <img src="assets/images/user-icon.svg" aria-hidden="true"/>
   </div>
 
   <form (ngSubmit)="displayTermsAndConditions()" [formGroup]="registerForm">
     <div class="inputWrapper">
+      <input type="text" placeholder="Full name" formControlName="fullName" [ngClass]="validFullName ? '' : 'error'" tabindex="1" aria-controls="registerForm"/>
       <div class="inputIcon">
         <img src="assets/images/fullNameIcon.svg" aria-hidden="true">
       </div>
-      <input type="text" placeholder="Full name" formControlName="fullName" [ngClass]="validFullName ? '' : 'error'" tabindex="1"/>
     </div>
     <div class="inputWrapper">
+      <input type="email" placeholder="Email" formControlName="email" [ngClass]="validEmail ? '' : 'error'" tabindex="2" aria-controls="registerForm"/>
       <div class="inputIcon">
         <img src="assets/images/envelope.svg" aria-hidden="true">
       </div>
-      <input type="email" placeholder="Email" formControlName="email" [ngClass]="validEmail ? '' : 'error'" tabindex="2"/>
     </div>
     <div class="inputWrapper">
+      <input type="text" placeholder="Username" formControlName="userName" [ngClass]="validUserName ? '' : 'error'" tabindex="3" aria-controls="registerForm"/>
       <div class="inputIcon">
         <img src="assets/images/helmet.svg" aria-hidden="true">
       </div>
-      <input type="text" placeholder="Username" formControlName="userName" [ngClass]="validUserName ? '' : 'error'" tabindex="3"/>
     </div>
     <div class="inputWrapper">
+      <input type="password" placeholder="Password" formControlName="password" [ngClass]="validPassword ? '' : 'error'" tabindex="4" aria-controls="registerForm"/>
       <div class="inputIcon">
         <img src="assets/images/key.svg" aria-hidden="true">
       </div>
-      <input type="password" placeholder="Password" formControlName="password" [ngClass]="validPassword ? '' : 'error'" tabindex="4"/>
     </div>
     <div class="inputWrapper">
+      <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" [ngClass]="validConfirmPassword ? '' : 'error'" tabindex="5" aria-controls="registerForm"/>
       <div class="inputIcon">
         <img src="assets/images/double-key.svg" aria-hidden="true">
       </div>
-      <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" [ngClass]="validConfirmPassword ? '' : 'error'" tabindex="5"/>
     </div>
 
     <div class="inputWrapper">
       <div class="inputIcon">
         <img src="assets/images/expertise-level.svg" aria-hidden="true">
       </div>
-      <select name="expertiseLevel" id="expertiseLevel" formControlName="expertiseLevel" tabindex="6">
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
+      <select name="expertiseLevel" id="expertiseLevel" formControlName="expertiseLevel" tabindex="6" aria-label="Expertise level" aria-controls="registerForm">
+        <option value="beginner" aria-label="Beginner">Beginner</option>
+        <option value="intermediate" aria-label="Intermediate">Intermediate</option>
+        <option value="advanced" aria-label="Advanced">Advanced</option>
       </select>
     </div>
 

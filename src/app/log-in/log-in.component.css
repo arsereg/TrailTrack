@@ -8,14 +8,14 @@ h1{
 }
 
 input{
-  width: 307px;
+  width: 295px;
   height: 50px;
   flex-shrink: 0;
   background: #d9d9d9;
   margin: 0px auto;
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0;
   color: #000000;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 30px;
   border:none;
   display:inline;
   clear:both;
@@ -68,10 +68,9 @@ form{
   width: 42px;
   height: 50px;
   flex-shrink: 0;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   background: #04BAE6;
   float:left;
-  position:absolute;
   display: grid;
   place-items: center;
 }
