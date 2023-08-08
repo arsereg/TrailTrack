@@ -32,7 +32,7 @@ export class ServicesComponent implements OnInit{
 
   loadAllServices(){
     this.vendors = [];
-    this.httpClient.get('http://192.168.100.30:8080/api/providers').subscribe(value => {
+    this.httpClient.get('http://192.168.42.77:8080/api/providers').subscribe(value => {
       for (let i in value){
         // @ts-ignore
         this.vendors.push(value[i])
@@ -42,7 +42,7 @@ export class ServicesComponent implements OnInit{
 
   private searchServices(inputData: string) {
     this.vendors = [];
-    this.httpClient.get(`http://192.168.100.30:8080/api/providers/by-name/${inputData}`).subscribe(value => {
+    this.httpClient.get(`http://192.168.42.77:8080/api/providers/by-name/${inputData}`).subscribe(value => {
       for (let i in value){
         // @ts-ignore
         this.vendors.push(value[i])

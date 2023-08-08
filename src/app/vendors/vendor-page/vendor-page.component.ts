@@ -29,7 +29,7 @@ export class VendorPageComponent implements OnInit{
     this.activatedRoute.params.subscribe(params => {
       this.id = params['id'];
       console.log(`id: ${this.id}`)
-      this.httpClient.get('http://192.168.100.30:8080/api/providers/' + this.id).subscribe(value => {
+      this.httpClient.get('http://192.168.42.77:8080/api/providers/' + this.id).subscribe(value => {
         // @ts-ignore
         this.name = value['name'];
         // @ts-ignore

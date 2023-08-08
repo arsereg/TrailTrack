@@ -26,7 +26,7 @@ export class EventsComponent implements OnInit{
 
   loadAllEvents(){
     this.events = [];
-    this.httpClient.get('http://192.168.100.30:8080/api/events').subscribe(value => {
+    this.httpClient.get('http://192.168.42.77:8080/api/events').subscribe(value => {
       console.log(value)
       for (let i in value){
         // @ts-ignore
@@ -48,7 +48,7 @@ export class EventsComponent implements OnInit{
 
   private searchEvent(inputData: string) {
     this.events = [];
-    this.httpClient.get(`http://192.168.100.30:8080/api/events/by-name/${inputData}`).subscribe(value => {
+    this.httpClient.get(`http://192.168.42.77:8080/api/events/by-name/${inputData}`).subscribe(value => {
       console.log(value)
       for (let i in value){
         // @ts-ignore

@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.httpClient.get('http://192.168.100.30:8080/api/account').subscribe(value => {
+    this.httpClient.get('http://192.168.42.77:8080/api/account').subscribe(value => {
       // @ts-ignore
       this.name = value['firstName'];
       // @ts-ignore

@@ -50,7 +50,7 @@ export class RegisterComponent implements OnInit{
       dialogRef.afterClosed().subscribe(dialogValue => {
         if(dialogValue === 'Accepted'){
           this.registerNewUser(value)
-          location.href = 'login';
+
         }else{
           alert('Not implemented yet')
         }
@@ -78,11 +78,12 @@ export class RegisterComponent implements OnInit{
         "authorities:": ["ROLE_USER"]
       }
 
-      this.httpClient.post('http://192.168.100.30:8080/api/register', userModel).subscribe(result => {
-        console.log(result);
+      this.httpClient.post('http://192.168.42.77:8080/api/register', userModel).subscribe(result => {
+        location.href = 'login';
       });
 
     }
+
   }
 
   protected readonly location = location;

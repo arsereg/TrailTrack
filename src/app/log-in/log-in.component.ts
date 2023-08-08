@@ -41,7 +41,7 @@ export class LogInComponent implements OnInit{
         "password": value['password'],
         "rememberMe": true
       }
-    this.httpClient.post('http://192.168.100.30:8080/api/authenticate', payload)
+    this.httpClient.post('http://192.168.42.77:8080/api/authenticate', payload)
       .subscribe(
         (response: any) => {
           localStorage.setItem('token', response['id_token']);

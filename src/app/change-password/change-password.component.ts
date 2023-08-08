@@ -38,7 +38,7 @@ export class ChangePasswordComponent {
         "newPassword": value['newPassword']
       }
 
-      this.httpClient.post('http://192.168.100.30:8080/api/account/change-password', userModel).subscribe(result => {
+      this.httpClient.post('http://192.168.42.77:8080/api/account/change-password', userModel).subscribe(result => {
         location.href = 'profile';
       });
 

@@ -26,7 +26,7 @@ export class EventPageComponent implements OnInit{
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.id = params['id'];
-      this.httpClient.get('http://192.168.100.30:8080/api/events/' + this.id).subscribe(value => {
+      this.httpClient.get('http://192.168.42.77:8080/api/events/' + this.id).subscribe(value => {
         // @ts-ignore
         this.title = value['title'];
         // @ts-ignore
